@@ -1,0 +1,19 @@
+from DoubleEndedLinkedList import DoubleEndedLinkedList
+
+
+class Queue:
+
+    def __init__(self):
+        self.ls = DoubleEndedLinkedList()
+
+    def isEmpty(self):
+        return self.ls.isEmpty()
+
+    def add(self, element):
+        self.ls.addLast(element)
+
+    def remove(self):
+        return self.ls.removeFirst()
+
+    def size(self):
+        return self.ls.size()

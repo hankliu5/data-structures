@@ -1,0 +1,83 @@
+(room1.txt)
+Goal found (with stack): It took 6 explored positions
+There is (are) 5 position(s) left to explore in stack
+********
+*      *
+*    @S*
+*     .*
+*   @ .*
+*   D..*
+*    ..*
+********
+Goal found (with queue): It took 13 explored positions
+There is (are) 10 position(s) left to explore in queue
+********
+*  ....*
+*   .@S*
+*  ....*
+*   @..*
+*   D..*
+*      *
+********
+
+(room2.txt)
+Goal found (with stack): It took 5 explored positions
+There is (are) 3 position(s) left to explore in stack
+*******
+*  .D@*
+*@ .@.*
+*  S..*
+*******
+Goal found (with queue): It took 6 explored positions
+There is (are) 4 position(s) left to explore in queue
+*******
+*  .D@*
+*@..@ *
+*..S. *
+*******
+
+(room3.txt)
+Goal found (with stack): It took 135 explored positions
+There is (are) 130 position(s) left to explore in stack
+***************
+*    @........*
+*@  ........@.*
+*   .S...... .*
+*   ........ .*
+*   .@....@. .*
+*   . ...... .*
+*   . ...... .*
+*   . ...... .*
+*   .@@..... .*
+*   .  @......*
+*   .   ...@..*
+*   .   ......*
+*   .   .@....*
+*   .@  ......*
+*   .   ......*
+*   .   ......*
+*   . D ......*
+*   ... ......*
+***************
+Goal found (with queue): It took 175 explored positions
+There is (are) 14104 position(s) left to explore in queue
+***************
+*....@........*
+*@..........@.*
+*....S........*
+*.............*
+*....@....@...*
+*.............*
+*.............*
+*.............*
+*....@@.......*
+*......@......*
+*..........@. *
+*...........  *
+*........@.   *
+*....@....    *
+*........     *
+* .....       *
+*  .. D       *
+*             *
+***************
