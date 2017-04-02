@@ -2,6 +2,7 @@ from DoubleEndedLinkedList import DoubleEndedLinkedList
 
 
 class Queue:
+    """Implemented queue with DoubleEndedLinkedList"""
 
     def __init__(self):
         self.ls = DoubleEndedLinkedList()

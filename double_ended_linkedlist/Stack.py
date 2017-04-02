@@ -2,6 +2,7 @@ from DoubleEndedLinkedList import DoubleEndedLinkedList
 
 
 class Stack:
+    """Implemented stack with DoubleEndedLinkedList"""
 
     def __init__(self):
         self.ls = DoubleEndedLinkedList()
