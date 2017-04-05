@@ -1,6 +1,18 @@
 class DHeap:
+    """D-nary min/max heap
+
+    Attributes:
+        __d: indicates how many children for a parent.
+        __isMaxHeap: indicates it's min or max heap.
+        __list: the structure that stores the data.
+    """
 
     def __init__(self, isMaxHeap=False, d=2):
+        """Initializes the heap object, with default binary minheap.
+
+        Raises:
+            BaseException: when d is less than 1.
+        """
         if d < 1:
             raise BaseException('d should not be less than one')
         self.__isMaxHeap = isMaxHeap
@@ -8,9 +20,15 @@ class DHeap:
         self.__list = []
 
     def size(self):
+        """Returns the size of the heap."""
         return len(self.__list)
 
     def add(self, data):
+        """Adds a new element into the heap.
+
+        Raises:
+            TypeError: if the data is NoneType.
+        """
         if data is None:
             raise TypeError('The type of data should not be NoneType')
 
@@ -18,8 +36,16 @@ class DHeap:
         self.__bubbleUp(self.size() - 1)
 
     def remove(self):
+        """Pops and returns the top element in the heap.
+
+        Returns:
+            The top element in the heap.
+
+        Raises:
+            IndexError: when the heap is empty.
+        """
         if self.size == 0:
-            raise IndexError('The list is empty')
+            raise IndexError('The heap is empty')
 
         self.__swap(0, self.size() - 1)
         temp = self.__list.pop()
@@ -27,12 +53,18 @@ class DHeap:
         return temp
 
     def get(self, index):
+        """Returns the specific index of element.
+
+        Raises:
+            IndexError: when input index is out of bound.
+        """
         if index < 0 or index > self.size() - 1:
             raise IndexError('index out of bound')
 
         return self.__list[index]
 
     def __bubbleUp(self, index):
+        """Helps to move the new element to the correct place."""
         if index == 0:
             return
         else:
@@ -47,6 +79,7 @@ class DHeap:
                 self.__bubbleUp(parentIndex)
 
     def __trickledown(self, index):
+        """Helps to move the element to the correct place after removing."""
         childIndex = self.__d * index + 1
         # checks whether the children are the leaves or not
         if (childIndex + 1 > self.size()):
@@ -76,5 +109,6 @@ class DHeap:
             self.__trickledown(childIndex)
 
     def __swap(self, index1, index2):
-        self.__list[index1], self.__list[
-            index2] = self.__list[index2], self.__list[index1]
+        """Helps to swap two elements."""
+        self.__list[index1], self.__list[index2] \
+            = self.__list[index2], self.__list[index1]
